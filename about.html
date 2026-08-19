@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — AI Creative Director &amp; Visual Strategist</title>
+  <meta name="description" content="Creative direction, reimagined: art direction, visual strategy and campaign development combining human judgement with AI production." />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav-footer.css" />
+  <link rel="stylesheet" href="css/work-about.css" />
+</head>
+<body data-page="about">
+
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__inner">
+        <div class="reveal">
+          <h1 id="aboutHeadline" class="display page-hero__heading" style="max-width:64rem"></h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-intro-section">
+      <div class="about-intro-grid">
+        <div class="reveal about-intro-grid__media">
+          <div id="aboutMedia"></div>
+        </div>
+        <div class="reveal about-intro-grid__text" style="transition-delay:120ms">
+          <p id="aboutLede" class="about-lede"></p>
+          <p id="aboutBody" class="body-copy whitespace-pre-line"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="backgroundSection" class="about-section border-t">
+      <div class="reveal about-section__grid">
+        <p id="backgroundHeading" class="label-xs text-muted about-section__label"></p>
+        <p id="backgroundBody" class="body-copy about-section__body"></p>
+      </div>
+    </section>
+
+    <section id="approachSection" class="about-section border-t">
+      <div class="page-hero__inner" style="padding:0">
+        <div class="reveal">
+          <p id="approachHeading" class="label-xs text-muted"></p>
+        </div>
+        <div id="approachList" class="approach-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/content.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/nav-footer.js"></script>
+  <script src="js/page-about.js"></script>
+</body>
+</html>

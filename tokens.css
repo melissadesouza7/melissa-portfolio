@@ -1,0 +1,42 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   Editorial dark-luxury design system, ported 1:1 from the original build.
+   Serif: Cormorant Garamond (headlines) — Sans: Jost (labels, body).
+   All colours are oklch tokens. Do not hardcode colours elsewhere —
+   reference these variables so the whole site stays in sync.
+   ========================================================================== */
+
+:root {
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+
+  /* near-black / warm ivory */
+  --background: oklch(0.145 0.004 60);
+  --foreground: oklch(0.937 0.008 80);
+  --ink: oklch(0.11 0.004 60);
+  --ivory: oklch(0.955 0.011 84);
+
+  --card: oklch(0.185 0.004 60);
+  --card-foreground: oklch(0.937 0.008 80);
+
+  --primary: oklch(0.937 0.008 80);
+  --primary-foreground: oklch(0.145 0.004 60);
+  --secondary: oklch(0.24 0.005 65);
+  --secondary-foreground: oklch(0.937 0.008 80);
+
+  --muted: oklch(0.24 0.005 65);
+  --muted-foreground: oklch(0.66 0.008 75);
+  --accent: oklch(0.78 0.035 78);
+  --accent-foreground: oklch(0.145 0.004 60);
+
+  --border: oklch(0.29 0.005 65);
+  --border-60: oklch(0.29 0.005 65 / 0.6);
+  --input: oklch(0.29 0.005 65);
+  --ring: oklch(0.66 0.008 75);
+
+  /* layout */
+  --container-max: 1600px;
+  --gutter: 1.5rem;      /* 24px mobile */
+  --gutter-md: 2.5rem;   /* 40px desktop */
+  --header-h: 5rem;      /* 80px */
+}

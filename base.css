@@ -1,0 +1,251 @@
+/* ==========================================================================
+   BASE / RESET
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   TYPOGRAPHY UTILITIES
+   ========================================================================== */
+
+.label-xs {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.label-sm {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.body-copy {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+
+/* Animated underline sweep, used on every text link */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  height: 1px;
+  width: 100%;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-underline:hover::after,
+.link-underline[data-active="true"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ==========================================================================
+   SCROLL REVEAL
+   Elements fade + rise into place the first time they enter the viewport.
+   Driven by js/reveal.js.
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================================================================
+   MEDIA FRAME
+   Every image on the site sits inside one of these. Handles the crop,
+   the hover zoom on project cards, and a labelled placeholder if an
+   image path is left empty.
+   ========================================================================== */
+
+.media-frame {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--secondary);
+}
+
+.media-frame img,
+.media-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.group:hover .media-frame img {
+  transform: scale(1.045);
+}
+
+.media-frame--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-60);
+  text-align: center;
+}
+
+.media-frame--empty span {
+  padding: 0 1.5rem;
+  color: var(--muted-foreground);
+}
+
+/* Aspect ratio helpers used across hero images, cards and galleries */
+.aspect-4-5 { aspect-ratio: 4 / 5; }
+.aspect-3-4 { aspect-ratio: 3 / 4; }
+.aspect-2-3 { aspect-ratio: 2 / 3; }
+.aspect-4-3 { aspect-ratio: 4 / 3; }
+.aspect-16-9 { aspect-ratio: 16 / 9; }
+.aspect-3-4-md-16-9 { aspect-ratio: 4 / 5; }
+
+@media (min-width: 768px) {
+  .md-aspect-16-9 { aspect-ratio: 16 / 9; }
+}
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--gutter-md);
+    padding-right: var(--gutter-md);
+  }
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .grid-12 {
+    gap: 4rem;
+  }
+}
+
+.border-t {
+  border-top: 1px solid var(--border-60);
+}

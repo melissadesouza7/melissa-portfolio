@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Melissa de Souza — AI Creative Director &amp; Visual Strategist</title>
+  <meta name="description" content="AI-powered visual direction, campaign concepts and storytelling for fashion, beauty, jewellery and lifestyle brands." />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav-footer.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/project-card.css" />
+</head>
+<body data-page="home">
+
+  <!-- SITE HEADER (rendered by js/nav-footer.js) -->
+  <div id="site-header"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div id="heroMedia"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <div class="hero__content-inner">
+          <div class="reveal">
+            <h1 id="heroHeadline" class="display hero__heading"></h1>
+          </div>
+          <div class="reveal hero__row" style="transition-delay: 140ms">
+            <p id="heroDescription" class="body-copy hero__desc"></p>
+            <a href="work.html" id="heroCta" class="label-sm link-underline hero__cta"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="selected-work">
+      <div class="selected-work__inner">
+        <div class="reveal">
+          <p id="selectedWorkHeading" class="label-xs text-muted"></p>
+        </div>
+
+        <div id="selectedWorkList" class="selected-work__list"></div>
+
+        <div class="reveal selected-work__all">
+          <a href="work.html" class="label-sm link-underline">All Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT STRIP -->
+    <section class="about-strip border-t">
+      <div class="about-strip__grid">
+        <div class="reveal about-strip__media">
+          <div id="aboutStripMedia"></div>
+        </div>
+        <div class="reveal about-strip__text" style="transition-delay: 120ms">
+          <h2 id="aboutStripHeading" class="display about-strip__heading"></h2>
+          <p id="aboutStripIntro" class="body-copy"></p>
+          <a href="about.html" class="label-sm link-underline">About</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="contact-cta border-t">
+      <div class="contact-cta__inner">
+        <div class="reveal">
+          <h2 id="contactCtaHeading" class="display contact-cta__heading"></h2>
+        </div>
+        <div class="reveal" style="transition-delay: 120ms">
+          <a href="contact.html" class="label-sm link-underline contact-cta__link">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER (rendered by js/nav-footer.js) -->
+  <div id="site-footer"></div>
+
+  <script src="js/content.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/nav-footer.js"></script>
+  <script src="js/page-home.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Study</title>
+  <meta name="description" content="" />
+
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/nav-footer.css" />
+  <link rel="stylesheet" href="../css/case-contact.css" />
+</head>
+<body data-page="project">
+
+  <div id="site-header"></div>
+
+  <main>
+    <div id="caseStudyRoot">
+      <!-- TITLE -->
+      <section class="case-title">
+        <div class="case-title__inner">
+          <div class="reveal">
+            <h1 id="caseTitle" class="display case-title__heading"></h1>
+          </div>
+          <div class="reveal" style="transition-delay:100ms">
+            <p id="caseMeta" class="label-xs case-title__meta"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HERO IMAGE -->
+      <div class="reveal case-hero">
+        <div id="caseHeroMedia"></div>
+      </div>
+
+      <div class="case-body">
+        <!-- THE CONCEPT -->
+        <div id="conceptSection" class="reveal case-section">
+          <p class="label-xs text-muted case-section__label">The Concept</p>
+          <p id="conceptText" class="case-concept case-section__content"></p>
+        </div>
+
+        <!-- CREATIVE DIRECTION -->
+        <div id="directionSection" class="reveal case-section">
+          <p class="label-xs text-muted case-section__label">Creative Direction</p>
+          <p id="directionText" class="body-copy whitespace-pre-line case-section__content"></p>
+        </div>
+
+        <!-- VISUAL DEVELOPMENT -->
+        <div id="devSection" class="reveal case-section">
+          <p class="label-xs text-muted case-section__label">Visual Development</p>
+          <div id="devGrid" class="case-dev-grid case-section__content"></div>
+        </div>
+      </div>
+
+      <!-- FINAL CAMPAIGN -->
+      <section id="gallerySection" class="case-gallery">
+        <div class="case-gallery__label">
+          <p class="label-xs text-muted">Final Campaign</p>
+        </div>
+        <div id="galleryList" class="case-gallery__list"></div>
+      </section>
+
+      <div class="case-body">
+        <!-- MOTION -->
+        <div id="motionSection" class="reveal case-section">
+          <p class="label-xs text-muted case-section__label">Motion</p>
+          <div class="case-motion case-section__content">
+            <video id="motionVideo" controls playsinline preload="metadata"></video>
+          </div>
+        </div>
+
+        <!-- MY ROLE -->
+        <div class="reveal case-section">
+          <p class="label-xs text-muted case-section__label">My Role</p>
+          <div class="case-section__content">
+            <p class="label-sm">AI Creative Director / Visual Strategist</p>
+            <p id="roleText" class="body-copy whitespace-pre-line" style="margin-top:1.5rem"></p>
+          </div>
+        </div>
+
+        <!-- CREDITS -->
+        <div id="creditsSection" class="reveal case-section">
+          <p class="label-xs text-muted case-section__label">Credits</p>
+          <p id="creditsText" class="body-copy whitespace-pre-line case-section__content" style="font-size:0.875rem"></p>
+        </div>
+      </div>
+
+      <!-- NEXT PROJECT -->
+      <section id="nextSection" class="case-next border-t">
+        <a id="nextLink" href="#">
+          <div class="case-next__inner">
+            <p class="label-xs text-muted">Next Project →</p>
+            <h2 id="nextTitle" class="display case-next__heading"></h2>
+          </div>
+        </a>
+      </section>
+    </div>
+
+    <!-- NOT FOUND STATE -->
+    <div id="caseNotFound" class="case-not-found" style="display:none">
+      <h1 class="display" style="font-size:3rem">Project not found</h1>
+      <a href="../work.html" class="label-sm link-underline" style="margin-top:2rem; display:inline-block">Back to work</a>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/content.js"></script>
+  <script src="../js/helpers.js"></script>
+  <script src="../js/reveal.js"></script>
+  <script src="../js/nav-footer.js"></script>
+  <script src="../js/page-project.js"></script>
+</body>
+</html>

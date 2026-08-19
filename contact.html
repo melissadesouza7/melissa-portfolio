@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Creative Direction &amp; Campaign Collaborations</title>
+  <meta name="description" content="For creative opportunities, AI creative direction, campaign development, art direction and brand collaborations." />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav-footer.css" />
+  <link rel="stylesheet" href="css/case-contact.css" />
+</head>
+<body data-page="contact">
+
+  <div id="site-header"></div>
+
+  <main>
+    <section class="contact-section">
+      <div class="page-hero__inner" style="padding:0">
+        <div class="reveal">
+          <h1 id="contactHeading" class="display contact-heading"></h1>
+        </div>
+
+        <div class="contact-grid">
+          <div class="reveal contact-grid__info">
+            <p id="contactCopy" class="body-copy"></p>
+            <a id="contactEmail" href="#" class="label-sm link-underline"></a>
+            <!-- No social links per brief: email is the only contact method. -->
+          </div>
+
+          <div class="reveal contact-grid__form" style="transition-delay:120ms">
+            <form id="contactForm" class="contact-form">
+              <div>
+                <label class="label-xs" for="name">Name</label>
+                <input id="name" name="name" required />
+              </div>
+              <div>
+                <label class="label-xs" for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+              <div>
+                <label class="label-xs" for="company">Company / Brand</label>
+                <input id="company" name="company" />
+              </div>
+              <div>
+                <label class="label-xs" for="projectType">Project type</label>
+                <input id="projectType" name="projectType" />
+              </div>
+              <div>
+                <label class="label-xs" for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="label-sm link-underline">Send enquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/content.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/nav-footer.js"></script>
+  <script src="js/page-contact.js"></script>
+</body>
+</html>
